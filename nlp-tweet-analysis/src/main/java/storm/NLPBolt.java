@@ -1,5 +1,5 @@
 package storm;
 
-public class NLPBolt {
+public class NLPBolt{
 
 }
