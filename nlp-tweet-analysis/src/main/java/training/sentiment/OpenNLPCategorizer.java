@@ -17,7 +17,7 @@ public class OpenNLPCategorizer {
 	public static void main(String[] args) {
 		OpenNLPCategorizer twitterCategorizer = new OpenNLPCategorizer();
 		twitterCategorizer.trainModel();
-		twitterCategorizer.classifyNewTweet("you had a good time");
+		twitterCategorizer.classifyNewTweet("iphone is not a good phone");
 	}
 
 	public void trainModel() {
