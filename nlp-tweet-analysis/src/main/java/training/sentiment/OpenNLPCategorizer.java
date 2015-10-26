@@ -17,13 +17,13 @@ public class OpenNLPCategorizer {
 	public static void main(String[] args) {
 		OpenNLPCategorizer twitterCategorizer = new OpenNLPCategorizer();
 		twitterCategorizer.trainModel();
-		twitterCategorizer.classifyNewTweet("iphone is not a good phone");
+		twitterCategorizer.classifyNewTweet("verizon is not a good company");
 	}
 
 	public void trainModel() {
 		InputStream dataIn = null;
 		try {
-			dataIn = new FileInputStream("resources/twitter-sentiment-large.txt");
+			dataIn = new FileInputStream("resources/twitter-data.csv");
 			ObjectStream<String> lineStream = new PlainTextByLineStream(dataIn, "UTF-8");
 			ObjectStream<DocumentSample> sampleStream = new DocumentSampleStream(lineStream);
 			model = DocumentCategorizerME.train("en", sampleStream);
